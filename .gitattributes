@@ -1,1 +1,2 @@
-src/static/* linguist-vendored
+src/static/js/* linguist-vendored
+src/static/css/* linguist-vendored
