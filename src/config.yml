@@ -1,0 +1,14 @@
+app:
+  info:
+    API: "Temperatures Arduino"
+    Language: "Python 3.x"
+    Framework: "Flask"
+    ORM: "SQLAlchemy"
+    DBM: "MySQL - MariaDB"
+    Author: "Jeyson Antonio Flores Deras"
+  database:
+    user: "root"
+    password: ""
+    host: "localhost"
+    port: "3306"
+    name: "arduino"
