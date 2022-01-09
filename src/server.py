@@ -8,7 +8,6 @@ import yaml
 with open("./src/config.yml", "r") as ymlfile:
         cfg = yaml.load(ymlfile)
 
-print(cfg["app"]["database"]["user"])
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://'+cfg["app"]["database"]["user"]+':'+cfg["app"]["database"]["password"]+'@'+cfg["app"]["database"]["host"]+'/'+cfg["app"]["database"]["name"]
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
