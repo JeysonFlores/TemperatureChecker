@@ -3,7 +3,7 @@ from threading import Thread
 import time
 from __main__ import Temperatures, db
 
-ser = serial.Serial("/dev/ttyUSB1", 9600, timeout=1)
+ser = serial.Serial("/dev/ttyUSB0", 9600, timeout=1)
 read = True
 datos = ""
 
@@ -12,8 +12,9 @@ def save_to_database(temp):
         new_temp = Temperatures(float(temp))
         db.session.add(new_temp)
         db.session.commit()
-    except:
-        print("-- Error -- There was an error saving to the database")
+    except Exception as e:
+        print('Error en la base de datos: '+ str(e))
+
 
 def serial_loop():
     while True:

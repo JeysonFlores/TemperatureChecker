@@ -102,6 +102,8 @@
                 console.log(firstClicked.year);
                 console.log(firstClicked.month + 1);
                 console.log(firstClicked.date);
+                // Simulate a mouse click:
+                window.location.href = "/date/" + firstClicked.year + parse_num(firstClicked.month + 1) + parse_num(firstClicked.date);
 
                 /*if (firstClickDateObj > secondClickDateObj) {
 
@@ -128,6 +130,13 @@
             selectDates(selected);
         });
 
+    }
+
+    function parse_num(num){
+        if (num > 9)
+            return num;
+        else
+            return "0" + num;
     }
 
     function selectDates(selected) {

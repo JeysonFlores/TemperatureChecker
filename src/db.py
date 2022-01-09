@@ -10,7 +10,13 @@ class Temperatures(db.Model):
     def __init__(self,temp):
         self.temp = temp
         date_now = datetime.now()
-        self.date = str(date_now.year) + str(date_now.month) + str(date_now.day)
-        self.time = str(date_now.hour) + ":" + str(date_now.minute)
+        self.date = str(date_now.year) + self.parse(date_now.month) + self.parse(date_now.day)
+        self.time = self.parse(date_now.hour) + ":" + self.parse(date_now.minute)
+
+    def parse(self, num):
+        if num > 9:
+            return str(num)
+        else:
+            return "0" + str(num)
 
 db.create_all()
