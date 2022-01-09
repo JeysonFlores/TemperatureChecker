@@ -1,6 +1,5 @@
 import serial
 from threading import Thread
-import time
 from __main__ import Temperatures, db
 
 ser = serial.Serial("/dev/ttyUSB0", 9600, timeout=1)
