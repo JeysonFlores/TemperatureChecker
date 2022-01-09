@@ -4,7 +4,7 @@ from flask import jsonify
 from functools import wraps
 import datetime
 import secrets
-from __main__ import cfg
+from __main__ import Temperatures
 
 app.config['SECRET_KEY'] = secrets.token_urlsafe(16)
 

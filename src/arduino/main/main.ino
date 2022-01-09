@@ -10,5 +10,5 @@ void loop() {
   temp = random(200, 400) / 10;
   String stringOne = String(temp, 2);
   Serial.write(stringOne.c_str());
-  delay(1000);
+  delay(3000);
 }

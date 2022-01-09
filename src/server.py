@@ -23,7 +23,9 @@ from schemas import *
 user_schema = TemperaturesSchema()
 
 from routes import *
+from serialport import *
 
 
 if __name__ == "__main__":
+    start_serial_loop()
     app.run(debug=True)
