@@ -24,4 +24,5 @@ The server makes use of the following Python dependencies:
 - pymysql
 ```
 
-Once you download them you just can run the `server.py` file and everything should work fine.
+Also you would probably have to change the `config.yml` file in the `arduino:serialport` key to set your connection port.
+Once you have done that you just can run the `server.py` file and everything should work fine.
