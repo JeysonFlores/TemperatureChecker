@@ -1,8 +1,8 @@
 import serial
 from threading import Thread
-from __main__ import Temperatures, db
+from __main__ import Temperatures, db, cfg
 
-ser = serial.Serial("/dev/ttyUSB0", 9600, timeout=1)
+ser = serial.Serial(cfg["app"]["arduino"]["port"], 9600, timeout=1)
 read = True
 datos = ""
 
