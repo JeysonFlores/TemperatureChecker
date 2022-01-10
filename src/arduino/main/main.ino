@@ -22,6 +22,6 @@ float readTemperature(){
   if (prod) {
     return dht.readTemperature();
   } else {
-    return random(200, 400) / 10;
+    return random(200, 400) / 10.0;
   }
 }
