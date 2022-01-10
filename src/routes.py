@@ -48,4 +48,4 @@ def date(date):
     month = str(date)[4:6]
     day = str(date)[6:8]
 
-    return render_template('date.html', temperatures = temps, year = year, month = month, day = day, min=min_temp.temp, max=max_temp.temp, avg=avg_temp)
+    return render_template('date.html', temperatures = temps, year = year, month = month, day = day, min=min_temp.temp, max=max_temp.temp, avg=avg_temp, format=format)
