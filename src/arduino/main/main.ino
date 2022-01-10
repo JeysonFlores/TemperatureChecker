@@ -15,7 +15,7 @@ void loop() {
   temp = readTemperature();
   String stringOne = String(temp, 2);
   Serial.write(stringOne.c_str());
-  delay(3000);
+  delay(300000);
 }
 
 float readTemperature(){
